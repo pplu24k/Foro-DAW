@@ -1,17 +1,17 @@
 <header class="bg-sky-500 shadow-lg shadow-sky-500/50 flex h-20 items-center justify-between">
-<h1 class="text-5xl font-bold  ml-5">
+<h1 class="text-5xl font-bold  ml-5 cursor-pointer" routerLink="/">
   ForoDAW
 </h1>
 
 <section>
-  <button class="rounded-full ring-offset-2 ring-4 p-2 mr-5 bg-zinc-800 text-white hover:bg-zinc-600 ease-in duration-300">
+  <button class="rounded-full ring-offset-2 ring-4 p-2 mr-5 bg-zinc-800 text-white hover:bg-zinc-600 ease-in duration-300" routerLink="/auth/logup">
     Registrarse
   </button>
-  <button class="rounded-full ring-offset-2 ring-4 p-2 mr-5 bg-sky-300 hover:bg-sky-100 ease-in duration-300">
+  <button class="rounded-full ring-offset-2 ring-4 p-2 mr-5 bg-sky-300 hover:bg-sky-100 ease-in duration-300" routerLink="/auth/login">
     Entrar
   </button>
 
 </section>
 
 </header>
-<app-home></app-home>
+<router-outlet></router-outlet>
