@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoriaModule } from './categoria/categoria.module';
 import { HomeComponent } from './home/home.component';
+import { SubforoCategoriasComponent } from './subforo-categorias/subforo-categorias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SubforoCategoriasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CategoriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
