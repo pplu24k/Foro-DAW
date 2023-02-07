@@ -1,11 +1,11 @@
 
-<nav class="w-1/4">
+<nav>
 
   <h2 class="text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">{{tipo}}</h2>
 
   <ul class=" text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700 ">
     <li *ngFor="let elemento of elementos">
-      <a routerLink="/subforo/{{elemento.id}}" class="hover:text-sky-600">
+      <a routerLink="/foro/{{elemento.slug}}" class="hover:text-sky-600">
         {{elemento.nombre}}
       </a>
     </li>

@@ -9,7 +9,7 @@ import { LogModule } from './log/log.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SectionNavComponent } from './section-nav/section-nav.component';
-import { SubforoCategoriasComponent } from './subforo-categorias/subforo-categorias.component';
+
 
 
 @NgModule({
@@ -21,17 +21,11 @@ import { SubforoCategoriasComponent } from './subforo-categorias/subforo-categor
   ],
   imports: [
     BrowserModule,
-
     AppRoutingModule,
-    LogModule
-
-
+    LogModule,
     HttpClientModule,
-
     AppRoutingModule,
-    CategoriaModule,
-    SubforoCategoriasComponent
-
+    CategoriaModule
   ],
 
   providers: [],
