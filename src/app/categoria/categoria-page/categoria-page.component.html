@@ -2,3 +2,12 @@
   Subforo: {{subforo}}
 </h1>
 <h1>Categoría: {{categoria}}</h1>
+
+<ul>
+  <app-hilo
+  *ngFor="let hilo of hilos"
+  [nombre]="hilo.nombre"
+  >
+
+  </app-hilo>
+</ul>

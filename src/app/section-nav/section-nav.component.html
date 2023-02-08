@@ -5,10 +5,14 @@
 
   <ul class=" text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700 ">
     <li *ngFor="let elemento of elementos">
-      <a routerLink="/foro/{{elemento.slug}}" class="hover:text-sky-600">
+      <a *ngIf="tipo=='Subforos'" routerLink="/foro/{{elemento.slug}}" class="hover:text-sky-600">
+        {{elemento.nombre}}
+      </a>
+      <a *ngIf="tipo=='Categorias'" routerLink="{{elemento.slug}}" class="hover:text-sky-600">
         {{elemento.nombre}}
       </a>
     </li>
+
   </ul>
 
 </nav>

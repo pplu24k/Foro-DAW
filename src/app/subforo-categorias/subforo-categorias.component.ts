@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CategoriasService } from '../services/categorias/categorias.service';
 
 @Component({
   selector: 'app-subforo-categorias',
@@ -11,9 +12,12 @@ export class SubforoCategoriasComponent implements OnInit{
 
 
   subforo: any
+  categorias : any;
+  estado: boolean = false;
 
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private categoriasService: CategoriasService
   ){
 
 
@@ -23,6 +27,14 @@ export class SubforoCategoriasComponent implements OnInit{
 
     this.activatedRoute.paramMap.subscribe((params) => {
     this.subforo = params.get('subforo') || null;
+
+    this.categoriasService.getCategorias(this.subforo).subscribe(categorias => {
+
+      this.categorias = categorias
+
+
+
+    })
 
   });
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HilosService } from 'src/app/services/hilos/hilos.service';
 
 @Component({
   selector: 'app-categoria-page',
@@ -11,8 +12,12 @@ export class CategoriaPageComponent implements OnInit {
   subforo: any
   categoria: any
 
+  categoriaDatos:any
+  hilos:any
+
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private hilosService: HilosService
   ){
 
 
@@ -24,6 +29,17 @@ export class CategoriaPageComponent implements OnInit {
     this.subforo = params.get('subforo') || null;
     this.categoria = params.get('categoria') || null;
   });
+
+  this.hilosService.getHilos(this.subforo,this.categoria).subscribe((datos:any) => {
+
+
+    console.log(datos)
+    this.hilos = datos.hilos;
+    this.categoriaDatos = datos.categoria;
+
+
+  })
+
   }
 
 

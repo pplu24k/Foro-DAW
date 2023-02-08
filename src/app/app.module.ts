@@ -9,6 +9,8 @@ import { LogModule } from './log/log.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SectionNavComponent } from './section-nav/section-nav.component';
+import { SubforoCategoriasComponent } from './subforo-categorias/subforo-categorias.component';
+import { HilosModule } from './hilos/hilos.module';
 
 
 
@@ -16,8 +18,8 @@ import { SectionNavComponent } from './section-nav/section-nav.component';
   declarations: [
     AppComponent,
     HomeComponent,
-
-    SectionNavComponent
+    SectionNavComponent,
+    SubforoCategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { SectionNavComponent } from './section-nav/section-nav.component';
     LogModule,
     HttpClientModule,
     AppRoutingModule,
-    CategoriaModule
+    CategoriaModule,
+    HilosModule
   ],
 
   providers: [],
