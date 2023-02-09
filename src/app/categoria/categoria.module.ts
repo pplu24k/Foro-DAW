@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoriaPageComponent } from './categoria-page/categoria-page.component';
 import { HilosModule } from '../hilos/hilos.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,6 +13,7 @@ import { HilosModule } from '../hilos/hilos.module';
     ],
     imports: [
         CommonModule,
+        RouterModule,
         HilosModule,
 
     ]

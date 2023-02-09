@@ -1,13 +1,18 @@
-<h1>
-  Subforo: {{subforo}}
-</h1>
-<h1>Categoría: {{categoria}}</h1>
+<div class="flex flex-col justify-center items-center h-full">
 
-<ul>
-  <app-hilo
-  *ngFor="let hilo of hilos"
-  [nombre]="hilo.nombre"
+  <h1>Categoría: {{categoriaDatos.nombre}}</h1>
+
+  <ul
+  class="text-gray-900 sm:w-3/4"
   >
+    <app-hilo
+    *ngFor="let hilo of hilos"
+    [nombre]="hilo.hilo.nombre"
+    [usuario]="hilo.usuario['0'].nick"
+    [creacion]="hilo.hilo.created_at"
+    [routerLink]="hilo.hilo.id"
+    >
 
-  </app-hilo>
-</ul>
+    </app-hilo>
+  </ul>
+</div>
