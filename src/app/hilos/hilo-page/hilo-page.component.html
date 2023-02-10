@@ -1,1 +1,11 @@
 <p>hilo-page works!</p>
+
+<ul>
+  <app-comentario
+  *ngFor="let post of contenido"
+  [creacion]="post.comentario.created_at"
+  [contenido]="post.comentario.contenido"
+  >
+
+  </app-comentario>
+</ul>
