@@ -1,7 +1,7 @@
 <div class=" p-0 sm:p-12">
   <div class="mx-auto w-full p-16 sm:max-w-md sm:px-6 py-12 bg-transparentborder-0 sm:shadow-lg  sm:rounded-3xl">
     <h1 class="text-2xl font-bold mb-8">Registro</h1>
-    <form id="form">
+    <form id="form" (ngSubmit)="submit($event)">
       <div class="relative z-0 w-full mb-5">
         <input
           type="text"
@@ -9,6 +9,7 @@
           placeholder="Nick (apodo)"
           required
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          [(ngModel)]="registrante.nick"
         />
         <span class="text-sm text-red-600 hidden" id="email" >Name is required</span>
       </div>
@@ -20,6 +21,7 @@
           placeholder="Email"
           required
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          [(ngModel)]="registrante.email"
         />
         <span class="text-sm text-red-600 hidden" id="email" >Name is required</span>
       </div>
@@ -31,6 +33,7 @@
           placeholder="Nombre real"
           required
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          [(ngModel)]="registrante.nombre"
         />
         <span class="text-sm text-red-600 hidden" id="email" >Name is required</span>
       </div>
@@ -41,7 +44,8 @@
           name="password"
           placeholder="Contraseña"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
+          [(ngModel)]="registrante.pass1"
+          />
 
       </div>
       <div class="relative z-0 w-full mb-5">
@@ -50,13 +54,14 @@
           name="password"
           placeholder="Repite la contraseña"
           class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
-        />
+          [(ngModel)]="registrante.pass2"
+          />
 
       </div>
 
       <button
         id="button"
-        type="button"
+        type="submit"
         class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-sky-500 hover:bg-sky-600 hover:shadow-lg focus:outline-none"
       >
         Registrarse
