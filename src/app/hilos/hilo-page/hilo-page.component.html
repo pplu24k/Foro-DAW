@@ -1,10 +1,13 @@
-<p>hilo-page works!</p>
+<h2 class="text-center">
+  {{datosHilo.nombre}}
+</h2>
 
-<ul>
+
+<ul class="p-10">
   <app-comentario
   *ngFor="let post of contenido"
-  [creacion]="post.comentario.created_at"
-  [contenido]="post.comentario.contenido"
+  [creacion]="post.comentario.comentario.created_at"
+  [contenido]="post"
   >
 
   </app-comentario>

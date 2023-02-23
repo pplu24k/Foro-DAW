@@ -14,7 +14,7 @@ export class HiloPageComponent implements OnInit {
   idHilo: any
 
   datosHilo:any
-  contenido:any
+  contenido:any[] = []
 
   constructor(
     private hiloContentService: HiloContentService,
@@ -30,16 +30,18 @@ export class HiloPageComponent implements OnInit {
       this.categoria = params.get('categoria')
       this.idHilo = params.get('hilo')
 
-      this.hiloContentService.getHilo(this.subforo,this.categoria,this.idHilo).subscribe((data:any) => {
 
-
-        console.log(data)
-        this.datosHilo = data.hilo
-        this.contenido = data.contenido
-      })
     })
 
+    this.hiloContentService.getHilo(this.subforo,this.categoria,this.idHilo).subscribe((data:any) => {
 
+
+
+      this.datosHilo = data.hilo
+
+      this.contenido = Array.of(...data.contenido)
+
+    })
 
 
   }

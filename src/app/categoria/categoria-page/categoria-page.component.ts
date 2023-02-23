@@ -33,7 +33,7 @@ export class CategoriaPageComponent implements OnInit {
   this.hilosService.getHilos(this.subforo,this.categoria).subscribe((datos:any) => {
 
 
-    console.log(datos)
+
     this.hilos = datos.hilos;
     this.categoriaDatos = datos.categoria;
 

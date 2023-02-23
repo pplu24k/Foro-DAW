@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SectionNavComponent } from './section-nav/section-nav.component';
 import { SubforoCategoriasComponent } from './subforo-categorias/subforo-categorias.component';
 import { HilosModule } from './hilos/hilos.module';
+import {UsuariosModule} from './usuarios/usuarios.module';
 
 
 
@@ -28,7 +29,8 @@ import { HilosModule } from './hilos/hilos.module';
     HttpClientModule,
     AppRoutingModule,
     CategoriaModule,
-    HilosModule
+    HilosModule,
+    UsuariosModule
   ],
 
   providers: [],
