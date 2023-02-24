@@ -20,5 +20,9 @@ export class PerfilService {
 
   }
 
+  establecerAvatar(imagen:any){
+    return this.httpClient.post('http://127.0.0.1:8000/api/perfil/pplu24k/avatar',imagen,{responseType: 'text'});
+  }
+
 
 }

@@ -10,6 +10,7 @@ import { PerfilService } from '../../services/usuarios/perfil.service';
 export class PerfilComponent {
 
 
+
   usuario: any
 
 
@@ -35,6 +36,28 @@ export class PerfilComponent {
     })
 
   });
+  }
+
+  submit($event: any) {
+
+    $event.preventDefault()
+
+    try {
+      const archivoCapturado = $event.target.avatar.files[0]
+      console.log($event.target.avatar.files[0])
+      //this.perfilService.establecerAvatar()
+
+      const formularioImagen = new FormData()
+
+      formularioImagen.append('file',archivoCapturado)
+
+      this.perfilService.establecerAvatar(formularioImagen).subscribe((data) => {
+        console.log(data)
+      })
+    } catch (error) {
+      console.log(error)
+    }
+
   }
 
 }

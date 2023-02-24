@@ -1,20 +1,36 @@
-<div>
+<div class="flex justify-center">
 
 
 
-<h2>
-  {{usuario.nick}}
-</h2>
+<article class="mt-10 flex-col bg-cyan-200 p-10">
 
-<section>
+  <div class="rounded-full overflow-hidden w-20 h-20">
+    <img *ngIf="usuario.avatar" src="localhost:8080/api/storage/{{usuario.avatar}}" alt="avatar">
+
+  </div>
+
+  <form (ngSubmit)="submit($event)" enctype="multipart/form-data">
+    <label for="avatar">
+      Cambiar avatar
+      <input type="file" name="avatar" id="avatar" accept="image/*">
+    </label>
+    <button type="submit" class="block bg-green-700 p-2">Enviar</button>
+  </form>
+
   <h2>
-    Descripcion:
+    {{usuario.nick}}
   </h2>
-  <p>
-    {{usuario.descripcion}}
-  </p>
-</section>
 
+  <section>
+    <h2>
+      Descripcion:
+    </h2>
+    <p>
+      {{usuario.descripcion}}
+    </p>
+  </section>
+
+</article>
 
 
 
