@@ -15,12 +15,14 @@ import {UsuariosModule} from './usuarios/usuarios.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SectionNavComponent,
-    SubforoCategoriasComponent
+    SubforoCategoriasComponent,
+
   ],
   imports: [
     BrowserModule,

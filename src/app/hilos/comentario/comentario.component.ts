@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-comentario',
@@ -9,6 +9,11 @@ export class ComentarioComponent {
   @Input() contenido:any;
   @Input() usuario!:string;
   @Input() creacion!:string;
+  @Output() abirRespuesta = new EventEmitter<string>();
+
+
+
+
 
 
   ngOnInit(): void {
@@ -18,6 +23,15 @@ export class ComentarioComponent {
 
     this.creacion = fragmentos[0] + ' ' + fragmentos[1].split('.')[0]
 
+    console.log(this.contenido)
+
+  }
+
+  emitirAccion(){
+
+    console.log("EEE")
+
+    this.abirRespuesta.emit("ABRIR")
 
 
   }
