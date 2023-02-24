@@ -5,6 +5,7 @@ import { HiloPageComponent } from './hilo-page/hilo-page.component';
 import { RouterModule } from '@angular/router';
 import { ComentarioComponent } from './comentario/comentario.component';
 import { RespuestaComponent } from './respuesta/respuesta.component';
+import { RedactarComponent } from './redactar/redactar.component';
 
 
 
@@ -13,7 +14,8 @@ import { RespuestaComponent } from './respuesta/respuesta.component';
     HiloComponent,
     HiloPageComponent,
     ComentarioComponent,
-    RespuestaComponent
+    RespuestaComponent,
+    RedactarComponent
   ],
   imports: [
     CommonModule,

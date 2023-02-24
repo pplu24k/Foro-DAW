@@ -13,6 +13,9 @@ export class HiloPageComponent implements OnInit {
   categoria: any
   idHilo: any
 
+  redactar:boolean = false;
+  responder:boolean = false;
+
   datosHilo:any
   contenido:any[] = []
 
@@ -45,5 +48,25 @@ export class HiloPageComponent implements OnInit {
 
 
   }
+
+  mostrarRedactor(){
+
+    this.redactar = true;
+
+  }
+
+  mostrarResponder(mensaje: any){
+
+    console.log(mensaje)
+    this.responder = true;
+  }
+
+  cerrarRedaccion(mensaje:string){
+
+
+    this.redactar = false;
+    this.responder = false;
+  }
+
 
 }
